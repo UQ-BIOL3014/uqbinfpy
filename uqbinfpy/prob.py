@@ -3,7 +3,7 @@ Module for classes and functions that are representing and processing basic prob
 Uses and depends on "Alphabet" that is used to define discrete random variables.
 '''
 import random
-from symbol import *
+from seqsymbol import *
 from copy import deepcopy
 import math
 
