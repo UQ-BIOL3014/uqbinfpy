@@ -8,3 +8,33 @@ permission.
 
 Quickstart guide
 ----------------
+
+With administrator access-
+
+To install::
+
+    sudo pip install git+https://github.com/UQ-BIOL3014/uqbinfpy.git
+
+
+To upgrade::
+    
+    sudo pip install --upgrade git+https://github.com/UQ-BIOL3014/uqbinfpy.git
+
+
+Without administrator access-
+
+To install::
+
+    sudo pip install --user git+https://github.com/UQ-BIOL3014/uqbinfpy.git
+
+
+To upgrade::
+    
+    sudo pip install --user --upgrade git+https://github.com/UQ-BIOL3014/uqbinfpy.git
+
+
+Set PATH on ILC computers::
+
+    export PYTHONPATH=$PYTHONPATH:/Users/local_user/Library/Python/2.7/lib/python/site-packages/
+    export PATH=$PATH:/Users/local_user/Library/Python/2.7/bin/
+
