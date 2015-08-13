@@ -1,14 +1,15 @@
-""" -------------------------------------------
-Below is test code
-------------------------------------------- """
+from uqbinfpy.sstruct import *
+from uqbinfpy import sequence
+from uqbinfpy import sym
+
 
 # Read some protein sequence data
 #prot = sequence.readFastaFile('/Users/mikael/workspace/binf/data/prot2.fa', prot_alpha)
 # read the secondary structure data for the proteins above (indices should agree)
 #sstr = sequence.readFastaFile('/Users/mikael/workspace/binf/data/sstr3.fa', sstr_alpha)
 
-prot = [sequence.Sequence('PNKRKGFSEGLWEIENNPTVKASGY', symbol.Protein_Alphabet, '2NLU_r76')]
-sstr = [sequence.Sequence('CCCCHHHHHHHHHHHCCCCCCCCCC', symbol.DSSP3_Alphabet, '2NLU_s76')]
+prot = [sequence.Sequence('PNKRKGFSEGLWEIENNPTVKASGY', sym.Protein_Alphabet, '2NLU_r76')]
+sstr = [sequence.Sequence('CCCCHHHHHHHHHHHCCCCCCCCCC', sym.DSSP3_Alphabet, '2NLU_s76')]
 
 tp = 0 # number of true positives (correctly identified calls)
 tn = 0 # number of true negatives (correctly missed no-calls)
