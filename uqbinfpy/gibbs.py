@@ -1,20 +1,24 @@
-'''
+"""
 Motif discovery using Gibb's sampling
 @author: mikael
-'''
+"""
+
 import math
 import random
-import seqsymbol
+
+import sym
 import prob
 import sequence
 
 class GibbsMotif():
-    """ A class for discovering linear motifs in sequence data.
-        Uses Gibb's sampling (Lawrence et al., Science 262:208-214 1993).
-        Also see http://bayesweb.wadsworth.org/gibbs/content.html which has info
-        on "site sampling", "motif sampling", "recursive sampling" and "centroid
-        sampling". The first is implemented (roughly) below. """
+    """
+    A class for discovering linear motifs in sequence data.
+    Uses Gibb's sampling (Lawrence et al., Science 262:208-214 1993).
 
+    Also see http://bayesweb.wadsworth.org/gibbs/content.html which has info
+    on "site sampling", "motif sampling", "recursive sampling" and "centroid
+    sampling". The first is implemented (roughly) below.
+    """
     def __init__(self, seqs, length, alignment = None):
         """ Construct a "discovery" session by providing the sequences that will be used.
             seqs: sequences in which the motif is sought
@@ -323,4 +327,3 @@ class GibbsAlign():
     def getBackground(self):
         """ Return the probability distributions for the background used in the discovery. """
         return self.p
-

@@ -3,7 +3,7 @@ Module sstruct -- methods for protein secondary structure
 '''
 
 import sequence
-import seqsymbol
+import sym
 
 cf_dict = {  # Chou-Fasman table
 #     P(a), P(b), P(t),    f(i), f(i+1), f(i+2), f(i+3)
@@ -30,8 +30,8 @@ cf_dict = {  # Chou-Fasman table
 'Y': (  69,  147,  114,   0.082,  0.065,  0.114,  0.125 ),    # Tyrosine
 'V': ( 106,  170,   50,   0.062,  0.048,  0.028,  0.053 ),}   # Valine
 
-prot_alpha = symbol.Protein_Alphabet
-sstr_alpha = symbol.DSSP3_Alphabet
+prot_alpha = sym.Protein_Alphabet
+sstr_alpha = sym.DSSP3_Alphabet
 
 def makesstr(seq, sym = '*', gap = '-'):
     """ Create a string from a list of booleans (seq) that indicate with sym what elements are true.
