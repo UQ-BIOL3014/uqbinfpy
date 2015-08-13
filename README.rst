@@ -1,9 +1,10 @@
-The UQ BIOL3014 Advanced Bioinformatics Sequence Library (uqbinfpy)
+The UQ BIOL3014 Bioinformatics Sequence Library (uqbinfpy)
 ===================================================================
 
 Unless stated otherwise this code was written by Mikael Bodén 
-(m.boden_AT_uq.edu.au). For use/redistribution outside of UQ please ask for 
-permission.
+(m.boden_AT_uq.edu.au). Nick Hughes wrote the barebone version, 
+and most of the web services. Many others have contributed.
+For use/redistribution outside of UQ please ask for permission.
 
 
 Quickstart guide
