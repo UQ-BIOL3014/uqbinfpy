@@ -453,7 +453,7 @@ class Alignment():
         if compact:
             f.write("Column\tConserv\tVariab\tAll (Up>=%.2f;Low>=%.2f)\n" % (theta1, theta2))
         else:
-            f.write("Column\tEntropy\tProb\tConserv\tSymbols (Up>=%.2f;Low>=%.2f)\n" % (theta1, theta2))
+            f.write("Column\tProb\tConserv\tSymbols (Up>=%.2f;Low>=%.2f)\n" % (theta1, theta2))
         countrow = 0
         for col in range(self.alignlen):
             countrow += 1
@@ -470,8 +470,6 @@ class Alignment():
                 if seq[col] in self.alphabet:
                     d_nogap.observe(seq[col])
             f.write("%d\t" % (col + 1))
-            if not compact:
-                f.write("%5.3f\t" % d.entropy())
             symprobs_nogap = d_nogap.getProbsort()
             symprobs_gap = d_gap.getProbsort()
             (maxsym, maxprob) = symprobs_nogap[0]
